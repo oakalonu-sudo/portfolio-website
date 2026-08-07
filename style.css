@@ -1,13 +1,29 @@
 body {background-color:bisque;
+      
       }
 
-nav {text-size: 20px;
-    text-align: right;}
+nav {font-size: 15px;
+    text-align: right;
+    text-decoration-style: none;
+    text-wrap:initial;
+    padding: 2px;
+    border: 3px;
+    margin-bottom: 2px;
+    background-color: beige;
+    }
 
-section {
+div.navlink {overflow-x: auto;
+            display: inline-block;
+            text-align: right;
+    }
+
+.home {font-size: 30px
 }
 
-h1 {font-family: Verdana, sans-serif;
+li {font-size: 20px;}
+
+h1 {font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif, Geneva, Tahoma, sans-serif;
     text-align: center;
     text-shadow: 3px 3px brown;
  }
@@ -19,16 +35,21 @@ h2 {font-family: Arial, Helvetica, sans-serif;
     color: }
 
 h3 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:}
+    }
 
-p {font-family: Georgia, 'Times New Roman', Times, serif;
-    text-size: 40px;
-    color:}
+p {font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    }
 
-p.small {text-size: 80px;
+p.small {font-size: 20px;
         font-variant: small-caps;}
 
-a {}
+a {font-weight: bold;
+   font-size: 130%
+}
+
+a:visited {color: green;
+}
 
 
 
