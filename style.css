@@ -1,6 +1,8 @@
-body {background-color:rgb(78, 78, 112);
-      
+body {background-color: #0f172a;
+      color: #F8FAFC;
       }
+
+section {margin-bottom: 6rem;}
 
 ul.nav {list-style-type: none;
   margin: 0;
@@ -13,22 +15,22 @@ ul.nav {list-style-type: none;
   top:0;
 }
 
-ul.nav li {float: left;
+.nav li {float: left;
 }
 
-ul.nav li a {display: block;
+.nav li a {display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   border-right: 2px solid white; }
 
-ul,nav li:last-child {
+.nav li:last-child {
   border-right: none; }
 
-ul.nav li a:hover {color: green;}
+.nav li a:hover {color: green;}
 
-ul.nav li a.active {background-color: red;}
+.nav li a.active {background-color: red;}
 
 .home {font-size: 30px
 }
@@ -39,14 +41,11 @@ h1 {clear: both;
     font-size: 80px;
     font-family: Georgia, 'Times New Roman', Times, serif, Geneva, Tahoma, sans-serif;
     text-align: center;
-    text-shadow: 3px 3px whitesmoke;
+    text-shadow: 3px 3px black;
  }
 
 h2 {font-family: Arial, Helvetica, sans-serif;
-    text-decoration-line: underline overline;
-    text-decoration-color: black;
-    text-decoration-style: double;
-    }
+    color: #CBD5E1;}
 
 h3 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
@@ -66,8 +65,18 @@ a {font-weight: bold;
 a:hover {color: green;
 }
 
-a:active {color: red;
+a::active {color: red;
         }
+
+footer {background-color: gray;
+       text-align: center;
+       font-size: 1rem;
+       padding: 1.5rem;
+      margin: 0; }
+
+
+footer > a {display: inline-block;
+            margin-right: 1.5rem;}
 
 
 
