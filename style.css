@@ -1,82 +1,162 @@
-body {background-color: #0f172a;
-      color: #F8FAFC;
-      }
+/* ---------- Base ---------- */
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-hover: #4ade80;
+}
 
-section {margin-bottom: 6rem;}
+html { scroll-behavior: smooth; }
 
-ul.nav {list-style-type: none;
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  overflow: auto;
-  background-color: black;
-  float: right;
-  margin-bottom: 60px;
+}
+
+main,
+header h1,
+footer {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: border-box;
+}
+
+/* ---------- Navigation ---------- */
+nav {
   position: sticky;
-  top:0;
+  top: 0;
+  z-index: 10;
+  background-color: #000;
+  border-bottom: 1px solid #334155;
 }
 
-.nav li {float: left;
+ul.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0 0.5rem;
 }
 
-.nav li a {display: block;
-  color: white;
-  text-align: center;
+.nav li a {
+  display: block;
   padding: 14px 16px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
   text-decoration: none;
-  border-right: 2px solid white; }
-
-.nav li:last-child {
-  border-right: none; }
-
-.nav li a:hover {color: green;}
-
-.nav li a.active {background-color: red;}
-
-.home {font-size: 30px
+  transition: color 0.2s;
 }
 
-li {font-size: 20px;}
+.nav li a:hover { color: var(--accent-hover); }
 
-h1 {clear: both;
-    font-size: 80px;
-    font-family: Georgia, 'Times New Roman', Times, serif, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    text-shadow: 3px 3px black;
- }
-
-h2 {font-family: Arial, Helvetica, sans-serif;
-    color: #CBD5E1;}
-
-h3 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-p {font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    }
-
-p.small {font-size: 20px;
-        font-variant: small-caps;}
-
-a {font-weight: bold;
-   font-size: 130%;
-   color: rgb(4, 56, 10);
+/* ---------- Headings ---------- */
+h1 {
+  font-family: "Sofia", Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 9vw, 5rem);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(180deg, #fde68a 0%, #fb923c 55%, #ef4444 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 14px rgba(251, 146, 60, 0.45));
 }
 
-a:hover {color: green;
+h2 {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
 }
 
-a::active {color: red;
-        }
+h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
 
-footer {background-color: gray;
-       text-align: center;
-       font-size: 1rem;
-       padding: 1.5rem;
-      margin: 0; }
+p { font-size: 1.1rem; }
 
+p.small {
+  font-size: 1.2rem;
+  font-variant: small-caps;
+}
 
-footer > a {display: inline-block;
-            margin-right: 1.5rem;}
+/* ---------- Sections ---------- */
+section {
+  margin-bottom: 6rem;
+  scroll-margin-top: 70px;
+}
 
+/* ---------- Skill chips ---------- */
+ul.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
 
+ul.chips li {
+  background-color: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 1rem;
+}
 
+/* ---------- Project cards ---------- */
+.card {
+  background-color: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h3 { margin-top: 0; }
+.card p { margin: 0.5rem 0; }
+.card .tech { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Links ---------- */
+a {
+  color: var(--accent);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+a:hover { color: var(--accent-hover); }
+a:active { color: #f87171; }
+a:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 3px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--surface);
+  max-width: none;
+  text-align: center;
+  padding: 1.5rem 1.25rem 2rem;
+  margin: 0;
+}
+
+footer h2 { border-bottom: none; }
+
+footer > a {
+  display: inline-block;
+  margin: 0 0.75rem;
+  font-size: 1.1rem;
+}
